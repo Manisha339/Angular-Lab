@@ -17,5 +17,8 @@
   
       <user-form [parentData]="data" (clickEvent)="handleUserFormClickEvent($event)"></user-form> 
   
-      <p>{{message}}</p>
+      <p [class]="pclass" [style.color]="pcolor">{{message}}</p>
+
+      <h3>Rendering User form</h3>
+      <list-user></list-user>
   </div>

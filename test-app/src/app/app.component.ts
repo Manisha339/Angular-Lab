@@ -10,6 +10,8 @@ export class AppComponent {
   data = "This is Parent of user Form";
   data1 = "This is Parent of list User";
   message = "Waiting for user to submit form";
+  pclass="pmessage";
+  pcolor = "black";
 
   handleUserFormClickEvent(event: any) {
     this.message = "Form is submitted by "+event;
