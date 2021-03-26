@@ -5,16 +5,17 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { FormMapComponent } from './form-map/form-map.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsernamecolorDirective } from './usernamecolor.directive';
+import { ListPostComponent } from './list-post/list-post.component';
 
 
 
 @NgModule({
-  declarations: [ListUserComponent, UserFormComponent, FormMapComponent, UsernamecolorDirective],
+  declarations: [ListUserComponent, UserFormComponent, FormMapComponent, UsernamecolorDirective, ListPostComponent],
   imports: [
     CommonModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [ListUserComponent,UserFormComponent,FormMapComponent]
+  exports: [ListUserComponent,UserFormComponent,FormMapComponent,ListPostComponent]
 })
 export class UserModule { }
