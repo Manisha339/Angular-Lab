@@ -9,16 +9,8 @@
 
 
 
-<!-- Toolbar -->
-<div class="root">
-  <p>This is app component</p>
-  
-      <h3>Rendering User form</h3>
-  
-      <user-form [parentData]="data" (clickEvent)="handleUserFormClickEvent($event)"></user-form> 
-  
-      <p [class]="pclass" [style.color]="pcolor">{{message}}</p>
+<nav-bar></nav-bar>
 
-      <h3>Rendering post list</h3>
-      <list-post></list-post>
-  </div>
+<h2>Welcome to my page. Please use menus to navigate</h2>
+
+<router-outlet></router-outlet>

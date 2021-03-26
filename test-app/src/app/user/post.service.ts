@@ -1,13 +1,18 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { PostModel } from './list-post/post.model';
-
+import { map} from 'rxjs/operators';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class PostService {
 
-  constructor() { }
-
+  constructor( private http: HttpClient) { }
+  getPostAsync() : Observable<PostModel[]>{
+    const url ="https://jsonplaceholder.typicode.com/posts";
+    return this.http.get(url).pipe(map((res: any)=> res));
+  }
   getPosts(): PostModel[]{
 
     let posts = new Array<PostModel>();
@@ -22,3 +27,7 @@ export class PostService {
     return posts;
     }
 }
+function res(res: any, arg1: any): import("rxjs").OperatorFunction<Object, unknown> {
+  throw new Error('Function not implemented.');
+}
+
