@@ -12,6 +12,9 @@ export class AppComponent {
   message = "Waiting for user to submit form";
   pclass="pmessage";
   pcolor = "black";
+  subtitle = "Welcome to my page. Please use menus to navigate";
+
+  dateVal: Date = new Date();
 
   handleUserFormClickEvent(event: any) {
     this.message = "Form is submitted by "+event;
